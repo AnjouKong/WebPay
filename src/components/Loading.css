@@ -1,0 +1,42 @@
+.loading_container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading_gif {
+  width: 100%;
+  height: 1.333333rem;
+  background: url('../images/loading.gif') no-repeat center center;
+  background-size: 1.066667rem 1.066667rem;
+}
+.loading_text {
+  margin-top: 0.32rem;
+  text-align: center;
+  font-size: 0.32rem;
+  color: #222;
+}
+/* 加载中，到底啦 */
+.list_loading, .list_load_done {
+  width: 100%;
+  height: 0.853333rem;
+  padding-top: 0.266667rem;
+  text-align: center;
+  font-size: 0.32rem;
+  color: #222;
+}
+.list_loading span {
+  display: inline-block;
+  padding-left: 0.426667rem;
+  background: url('../images/loading.gif') no-repeat left center;
+  background-size: 0.32rem;
+}
+.list_load_done span {
+  display: inline-block;
+  padding-left: 0.426667rem;
+  background: url('../images/loading.gif') no-repeat left center;
+  background-size: 0.32rem;
+}
