@@ -116,6 +116,17 @@ class HomePage extends Component {
         });
         this.orderNo = res.body.orderNo;
 
+        // 2018.12.20 增加纯套餐模式,直接进入支付
+        if (res.body.goods.length === 1) {
+          this.payInfo = {
+            hasChoose: true,
+            goodType: res.body.goods[0].goodType,
+            goodId: res.body.goods[0].goodId,
+            price: res.body.goods[0].price
+          };
+          this.confirm();
+        }
+
         // 日志上报
         logReportParam.eventEnum = 'ORDER_MOBILE_GET_DATA_EVENT';
         logReportParam.eventDescribe = location.href;
